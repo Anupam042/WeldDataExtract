@@ -18,7 +18,7 @@ To install this extension in Chrome, follow these steps:
 5. The extension should now be installed and will appear in your Chrome toolbar.
 
 ## Usage
-After installation, navigate to a web page containing a table with the class `datatable title nofilter`. Click the extension icon in the toolbar to open the popup, then select:
+After installation, navigate to a web page with table of all welds data (usually "froniusUnitIpAddress"/documentation/documentation.html) whcih contains welds data in a table with the class `datatable title nofilter`. Click the extension icon in the toolbar to open the popup, then select:
 
 - `Download as JSON` to download the table data in JSON format.
 - `Download as CSV` to download the table data in CSV format.
