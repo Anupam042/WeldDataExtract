@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Web Scraper Extension",
+    "version": "1.0",
+    "description": "A Chrome extension for scraping web data.",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "tabs",
+      "scripting",
+      "<all_urls>"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
