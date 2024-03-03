@@ -37,8 +37,6 @@ function downloadTableAsJson() {
   download(jsonData, 'data.json', 'application/json');
 }
 
-// ... (other functions like download() and tableToJson())
-
 // Function to convert JSON data to CSV format
 function jsonToCsv(jsonData) {
   const array = JSON.parse(jsonData);
