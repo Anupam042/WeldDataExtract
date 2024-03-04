@@ -1,12 +1,27 @@
-# Chrome Extension to extract Fronius weld Data
+# Chrome Extension to extract Fronius Weld Data
 
 ## Description
 This Chrome extension is designed to scrape and download fronius weld data from fronius welds management portal as JSON or CSV files. It specifically targets tables with the class `datatable title nofilter` and extracts their data upon user request through a simple popup interface.
 
 ## Features
-- Scrape tables holding weld data from web pages using content scripts.
+- Scrape tables holding weld data from web page with the class `datatable title nofilter` using content scripts.
 - Download table data as JSON or CSV files.
 - Easy to use with a simple click on the extension icon.
+
+## Drawbacks
+- Is not automating the process, the user will have to navigate to the weld data page and apply the time filter.
+- The JSON Structure is hardcoded in the `tableToJson()` function, hence downloaded file will only have following structures -
+`{
+    "seamNumber": "",
+    "startTime": "",
+    "weldingDuration": "",
+    "current": "",
+    "voltage": "",
+    "wireFeedSpeed": "",
+    "power": "",
+    "energy": "",
+    "gasConsumption": ""
+}`
 
 ## Installation
 To install this extension in Chrome, follow these steps:
@@ -18,7 +33,7 @@ To install this extension in Chrome, follow these steps:
 5. The extension should now be installed and will appear in your Chrome toolbar.
 
 ## Usage
-After installation, navigate to a web page with table of all welds data (usually "froniusUnitIpAddress"/documentation/documentation.html) whcih contains welds data in a table with the class `datatable title nofilter`. Click the extension icon in the toolbar to open the popup, then select:
+After installation, navigate to a web page with table of all welds data (usually {froniusUnitIpAddress}/documentation/documentation.html) whcih contains welds data in a table with the class `datatable title nofilter`. Click the extension icon in the toolbar to open the popup, then select:
 
 - `Download as JSON` to download the table data in JSON format.
 - `Download as CSV` to download the table data in CSV format.
@@ -36,3 +51,5 @@ Contributions are welcome! If you would like to contribute to this project, plea
 
 ## Contact
 anupamtamrakar1994@gmail.com
+https://github.com/Anupam042/WeldDataExtract
+https://www.linkedin.com/in/automationstuff/
